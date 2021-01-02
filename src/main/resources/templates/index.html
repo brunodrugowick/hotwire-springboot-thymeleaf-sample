@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="${lang}"
+      th:lang="${lang}" th:with="lang=${#locale.language}"
+      xmlns="http://www.w3.org/1999/xhtml">
+<head th:insert="fragments/html-head :: html-head">
+    <title>Home</title>
+</head>
+<body>
+<section>
+    <h1>Showcase how to replace part of a page</h1>
+
+    <h4>Turbo Frame</h4>
+    <turbo-frame id="person_frame">
+        <a href="/person/any">Get a new John</a>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Initial static John</td>
+            </tr>
+        </table>
+    </turbo-frame>
+
+    <h4>What's happening</h4>
+    <p>The &lt;turbo-frame&gt; intercept stuff and instead of loading a new page it requests it.
+        Upon response the HTML fragment is then replaced on the page. That's why you see the ID incrementing...</p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments/html-head :: html-head">
+</head>
+<body>
+<h1>A Person (page or Turbo component)</h1>
+<turbo-frame id="person_frame">
+    <a href="/person/any">Get a new John</a>
+    <table>
+        <tr>
+           <th>ID</th>
+           <th>Name</th>
+        </tr>
+        <tr>
+            <td th:text="${person.id}"></td>
+            <td th:text="${person.name}"></td>
+        </tr>
+    </table>
+</turbo-frame>
+</body>
+</html>
