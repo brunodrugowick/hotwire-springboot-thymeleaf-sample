@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments/html-head :: html-head">
+</head>
+<body>
+<h1>A Beverage (page or Turbo component)</h1>
+<turbo-stream action="append" target="beverages_list">
+    <template>
+        <div th:id="'beverage_' + ${beverage.id}">
+            <p>
+                <span th:text="${beverage.id}"></span> - <span th:text="${beverage.name}"></span>
+            </p>
+        </div>
+    </template>
+</turbo-stream>
+</body>
+</html>
