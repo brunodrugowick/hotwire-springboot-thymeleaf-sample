@@ -18,8 +18,8 @@ public class ThymeleafConfig {
      * This creates the need for the developer to remember to name a template with `stream` in part of the name if one
      * wants to use it as a turbo-stream.
      *
-     * TODO: The ideal solution would be to check if Turbo sent the `turbo-stream` on the Accept header and change the
-     * resolver in runtime accordingly.
+     * Since the turbo-stream content-type is always sent by the turo client, this is, for now, the ideal solution that
+     * I have.
      *
      * @param templateEngine
      * @return a custom ThymeleafViewResolver for views that have a turbo-stream tag.
