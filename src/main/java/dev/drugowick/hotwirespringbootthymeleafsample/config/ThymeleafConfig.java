@@ -18,7 +18,7 @@ public class ThymeleafConfig {
      * This creates the need for the developer to remember to name a template with `stream` in part of the name if one
      * wants to use it as a turbo-stream.
      *
-     * Since the turbo-stream content-type is always sent by the turo client, this is, for now, the ideal solution that
+     * Since the turbo-stream content-type is always sent by the turbo client, this is, for now, the ideal solution that
      * I have.
      *
      * @param templateEngine
@@ -28,7 +28,7 @@ public class ThymeleafConfig {
     public ThymeleafViewResolver viewResolver(SpringTemplateEngine templateEngine) {
         ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
 
-        viewResolver.setContentType("text/html; turbo-stream");
+        viewResolver.setContentType("text/vnd.turbo-stream.html");
         viewResolver.setCharacterEncoding(StandardCharsets.UTF_8.name());
         viewResolver.setOrder(0);
         viewResolver.setViewNames(new String[] { "*stream*" });
